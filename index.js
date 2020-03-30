@@ -1,24 +1,18 @@
-import React, { Component } from 'react';
+import React,{useState, useEffect} from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'Baba Ali'
-    };
-  }
 
-  render() {
+  function App(){
+    const [name, setName] = useState('Aleeycreative')
     return (
       <div>
-        <Hello name={this.state.name} />
+        <Hello name={name} />
         <h2> Welcome to our application</h2>
       </div>
     );
   }
-}
+
 
 render(<App />, document.getElementById('root'));
